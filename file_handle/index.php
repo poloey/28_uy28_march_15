@@ -14,7 +14,7 @@
 if (isset($_POST['name']) && isset($_POST['email'])) {
   $name = $_POST['name'];
   $email = $_POST['email'];
-  $string = "name: $name and email: $email \n";
+  $string = "$name, $email \n";
   $today = date('y-m-d');
   $file = fopen("{$today}.txt", 'a');
   fwrite($file, $string);
