@@ -60,6 +60,26 @@ nl2br('string');
 fclose('handle')
 ~~~
 
+## table data generation 
+
+~~~php
+<table class="table table-bordered">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+  </tr>
+  <?php while($string = fgets($file)): ?>
+  <?php 
+    $stringexploded = explode(',', $string);
+    list($name, $email) = $stringexploded;
+   ?>
+   <tr>
+     <td><?php echo $name ?></td>
+     <td><?php echo $email ?></td>
+   </tr>
+  <?php endwhile; ?>
+</table>
+~~~
 
 
 
